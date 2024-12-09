@@ -1,0 +1,3 @@
+export const CAMPAIGN_TAG = 'DCLMF24'
+export const ADDITIONAL_CAMPAIGN_BROWSE_TAGS = []
+export const CAMPAIGN_TAB_ANIMATION_ENABLED = true
