@@ -168,6 +168,7 @@ const HomePage = (props: Props) => {
     // eslint-disable-next-line
   }, [fetchAssetsForView])
 
+  /*
   const renderSlideshow = (view: HomepageView) => {
     const hasItemsSection = view === View.HOME_NEW_ITEMS || view === View.HOME_WEARABLES
 
@@ -187,12 +188,13 @@ const HomePage = (props: Props) => {
       />
     )
   }
+  */
 
-  const homepageWithoutLatestSales = Object.keys(homepage).filter(view => view !== View.HOME_SOLD_ITEMS)
+  // const homepageWithoutLatestSales = Object.keys(homepage).filter(view => view !== View.HOME_SOLD_ITEMS)
   // trending and newest sections
-  const firstViewsSection = homepageWithoutLatestSales.splice(0, 2) as HomepageView[]
+  // const firstViewsSection = homepageWithoutLatestSales.splice(0, 2) as HomepageView[]
   // rest of the sections
-  const secondViewsSection = homepageWithoutLatestSales as HomepageView[]
+  // const secondViewsSection = homepageWithoutLatestSales as HomepageView[]
 
   return (
     <PageLayout activeTab={NavigationTab.OVERVIEW}>

@@ -25,9 +25,9 @@ export enum RankingsTimeframes {
 
 export enum RankingEntities {
   WEARABLES = 'wearables',
-  EMOTES = 'emotes',
-  CREATORS = 'creators',
-  COLLECTORS = 'collectors'
+  // EMOTES = 'emotes',
+  // CREATORS = 'creators',
+  // COLLECTORS = 'collectors'
 }
 
 export enum RankingsSortBy {
