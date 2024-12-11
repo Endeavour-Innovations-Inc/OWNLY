@@ -20,12 +20,12 @@ import { NavigationTab } from '../Navigation/Navigation.types'
 import { PageLayout } from '../PageLayout'
 import { RankingsTable } from '../RankingsTable'
 import { RecentlySoldTable } from '../RecentlySoldTable'
-import { Slideshow } from './Slideshow'
+// import { Slideshow } from './Slideshow'
 import { Props } from './HomePage.types'
 import './HomePage.css'
 
 const HomePage = (props: Props) => {
-  const { homepage, homepageLoading, onFetchAssetsFromRoute, isCampaignHomepageBannerEnabled } = props
+  const { homepage, onFetchAssetsFromRoute, isCampaignHomepageBannerEnabled } = props
   const history = useHistory()
   const vendor = VendorName.DECENTRALAND
 
@@ -40,6 +40,7 @@ const HomePage = (props: Props) => {
     []
   )
 
+  /*
   const sectionsSubtitles: Partial<Record<View, string>> = useMemo(
     () => ({
       // [View.HOME_TRENDING_ITEMS]: t('home_page.home_trending_items_subtitle'),
@@ -47,13 +48,16 @@ const HomePage = (props: Props) => {
     }),
     []
   )
+  */
 
+  /*
   const sectionsViewAllTitle: Partial<Record<View, string>> = useMemo(
     () => ({
       [View.HOME_TRENDING_ITEMS]: t('home_page.home_trending_items_explore_all')
     }),
     []
   )
+  */
 
   const assetTypes: Partial<Record<View, AssetType>> = useMemo(
     () => ({
@@ -85,6 +89,7 @@ const HomePage = (props: Props) => {
     []
   )
 
+  /*
   const handleViewAll = useCallback(
     (view: View, fromEmptyState: boolean = false) => {
       const section = sections[view]
@@ -118,6 +123,7 @@ const HomePage = (props: Props) => {
     },
     [assetTypes, sort, sections, history]
   )
+  */
 
   const fetchAssetsForView = useCallback(
     (view: View, section?: Section) =>
@@ -133,6 +139,7 @@ const HomePage = (props: Props) => {
     [onFetchAssetsFromRoute, vendor, sections, assetTypes, sort]
   )
 
+  /*
   const sectionsEmptyMessages: Partial<Record<View, string>> = useMemo(
     () => ({
       [View.HOME_TRENDING_ITEMS]: t('home_page.home_trending_items_empty_message', {
@@ -151,7 +158,9 @@ const HomePage = (props: Props) => {
     }),
     [fetchAssetsForView, handleViewAll]
   )
+  */
 
+  /*
   const handleOnChangeItemSection = useCallback(
     (view: HomepageView, section: Section) => {
       sections[view] = section
@@ -159,6 +168,7 @@ const HomePage = (props: Props) => {
     },
     [sections, fetchAssetsForView]
   )
+  */
 
   useEffect(() => {
     let view: HomepageView
