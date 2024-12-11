@@ -11,7 +11,7 @@ import { View } from '../../modules/ui/types'
 import { Section } from '../../modules/vendor/decentraland/routing/types'
 import { VendorName } from '../../modules/vendor/types'
 import { AssetStatusFilter } from '../../utils/filters'
-import { AnalyticsVolumeDayData } from '../AnalyticsVolumeDayData'
+// import { AnalyticsVolumeDayData } from '../AnalyticsVolumeDayData'
 import { CampaignHomepageBanner } from '../Campaign/banners/CampaignHomepageBanner'
 import { CampaignBanner } from '../Campaign/CampaignBanner'
 import { SmartWearablesLaunchModal } from '../Modals/FTU/SmartWearablesLaunchModal'
@@ -42,7 +42,7 @@ const HomePage = (props: Props) => {
 
   const sectionsSubtitles: Partial<Record<View, string>> = useMemo(
     () => ({
-      [View.HOME_TRENDING_ITEMS]: t('home_page.home_trending_items_subtitle'),
+      // [View.HOME_TRENDING_ITEMS]: t('home_page.home_trending_items_subtitle'),
       [View.HOME_WEARABLES]: t('home_page.home_recently_listed_items_subtitle')
     }),
     []
@@ -196,6 +196,7 @@ const HomePage = (props: Props) => {
 
   return (
     <PageLayout activeTab={NavigationTab.OVERVIEW}>
+      {/* <ListsLaunchModal /> */}
       <ListsLaunchModal />
       <SmartWearablesLaunchModal />
       {isCampaignHomepageBannerEnabled ? (
@@ -204,10 +205,10 @@ const HomePage = (props: Props) => {
         </CampaignBanner>
       ) : null}
       <Page className="HomePage">
-        <AnalyticsVolumeDayData />
-        {firstViewsSection.map(renderSlideshow)}
+        {/* <AnalyticsVolumeDayData /> */}
+        {/* {firstViewsSection.map(renderSlideshow)} */}
         <RankingsTable />
-        {secondViewsSection.map(renderSlideshow)}
+        {/* {secondViewsSection.map(renderSlideshow)} */}
         <RecentlySoldTable />
       </Page>
       <BackToTopButton />
