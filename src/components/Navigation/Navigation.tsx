@@ -8,10 +8,10 @@ import { AssetType } from '../../modules/asset/types'
 import { locations } from '../../modules/routing/locations'
 import { SortBy } from '../../modules/routing/types'
 import { VendorName } from '../../modules/vendor'
-import { Section } from '../../modules/vendor/decentraland'
+// import { Section } from '../../modules/vendor/decentraland'
 import * as decentraland from '../../modules/vendor/decentraland'
 import * as events from '../../utils/events'
-import { AssetStatusFilter } from '../../utils/filters'
+// import { AssetStatusFilter } from '../../utils/filters'
 import { CAMPAIGN_TAB_ANIMATION_ENABLED } from '../Campaign/config'
 import { Props, NavigationTab } from './Navigation.types'
 import './Navigation.css'
@@ -24,14 +24,6 @@ const Navigation = (props: Props) => {
   const handleOpenBuyManaWithFiatModal = () => {
     analytics.track(events.OPEN_BUY_MANA_MODAL)
     onOpenBuyManaWithFiatModal()
-  }
-
-  const browseDefaultOptions = {
-    section: decentraland.Section.WEARABLES,
-    vendor: VendorName.DECENTRALAND,
-    page: 1,
-    sortBy: SortBy.NEWEST,
-    status: AssetStatusFilter.ON_SALE
   }
 
   return (
@@ -63,20 +55,9 @@ const Navigation = (props: Props) => {
               </Tabs.Tab>
             </Link>
           ) : null}
-          <Link to={locations.browse(browseDefaultOptions)} onClick={onClearFilters}>
-            <Tabs.Tab active={activeTab === NavigationTab.COLLECTIBLES}>{t('navigation.collectibles')}</Tabs.Tab>
-          </Link>
-          <Link to={locations.lands({ section: Section.LAND, assetType: AssetType.NFT })}>
-            <Tabs.Tab active={activeTab === NavigationTab.LANDS}>{t('navigation.land')}</Tabs.Tab>
-          </Link>
-          <Link to={locations.claimName()}>
-            <Tabs.Tab active={activeTab === NavigationTab.NAMES}>{t('navigation.names')}</Tabs.Tab>
-          </Link>
+          {/* Change and modify the second header links here */}
           <Link to={locations.defaultCurrentAccount()}>
             <Tabs.Tab active={activeTab === NavigationTab.MY_STORE}>{t('navigation.my_assets')}</Tabs.Tab>
-          </Link>
-          <Link to={locations.lists()}>
-            <Tabs.Tab active={activeTab === NavigationTab.MY_LISTS}>{t('navigation.my_lists')}</Tabs.Tab>
           </Link>
           <Mobile>
             <Link to={locations.activity()}>
