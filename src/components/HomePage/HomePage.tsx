@@ -1,16 +1,16 @@
 import React, { useCallback, useEffect, useMemo } from 'react'
-import { useHistory } from 'react-router-dom'
-import { getAnalytics } from 'decentraland-dapps/dist/modules/analytics/utils'
-import { t } from 'decentraland-dapps/dist/modules/translation/utils'
+// import { useHistory } from 'react-router-dom'
+// import { getAnalytics } from 'decentraland-dapps/dist/modules/analytics/utils'
+// import { t } from 'decentraland-dapps/dist/modules/translation/utils'
 import { BackToTopButton, Page } from 'decentraland-ui'
 import { AssetType } from '../../modules/asset/types'
-import { locations } from '../../modules/routing/locations'
-import { BrowseOptions, SortBy } from '../../modules/routing/types'
+// import { locations } from '../../modules/routing/locations'
+import { SortBy } from '../../modules/routing/types'
 import { HomepageView } from '../../modules/ui/asset/homepage/types'
 import { View } from '../../modules/ui/types'
 import { Section } from '../../modules/vendor/decentraland/routing/types'
 import { VendorName } from '../../modules/vendor/types'
-import { AssetStatusFilter } from '../../utils/filters'
+// import { AssetStatusFilter } from '../../utils/filters'
 // import { AnalyticsVolumeDayData } from '../AnalyticsVolumeDayData'
 import { CampaignHomepageBanner } from '../Campaign/banners/CampaignHomepageBanner'
 import { CampaignBanner } from '../Campaign/CampaignBanner'
@@ -26,7 +26,7 @@ import './HomePage.css'
 
 const HomePage = (props: Props) => {
   const { homepage, onFetchAssetsFromRoute, isCampaignHomepageBannerEnabled } = props
-  const history = useHistory()
+  // const history = useHistory()
   const vendor = VendorName.DECENTRALAND
 
   const sections: Partial<Record<View, Section>> = useMemo(
@@ -82,12 +82,14 @@ const HomePage = (props: Props) => {
     []
   )
 
+  /*
   const status: Partial<Record<View, AssetStatusFilter>> = useMemo(
     () => ({
       [View.HOME_NEW_ITEMS]: AssetStatusFilter.ON_SALE
     }),
     []
   )
+  */
 
   /*
   const handleViewAll = useCallback(
